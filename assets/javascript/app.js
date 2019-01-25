@@ -1,4 +1,7 @@
+
+
 $(document).ready(function () {
+
 
     var qna = {
         one: {
@@ -47,11 +50,16 @@ $(document).ready(function () {
 
     var timer = 0;
 
+// Functions that run once the page loads.
+hideQuestions();
+
+
     // Function to hide questions, button, and timer.
     function hideQuestions() {
         $("#question").hide();
         $("#answers").hide();
         $("#timer").hide();
+        $("#playAgain").hide();
     }
 
     // Function to show question, buttons, and timer.
@@ -75,7 +83,7 @@ $(document).ready(function () {
         $("#timer").html(timer + " seconds left");
 
         if (timer === 0) {
-            stopTimer()
+            stopTimer();
             $("#timer").hide();
 
             if (isFirstQ) {
@@ -104,6 +112,7 @@ $(document).ready(function () {
 
     function stopTimer() {
         clearInterval(intervalId);
+        clearTimeout(intervalId);
     }
 
     var $results = document.getElementById("results");
@@ -164,7 +173,7 @@ $(document).ready(function () {
         $scoreWin.textContent = "Correct Answers: " + correctScore;
         $scoreLose.textContent = "Incorrect Answers: " + incorrectScore;
         $scoreUnanswered.textContent = "Unanswered: " + unansweredScore;
-
+        $("#playAgain").show();
     }
 
     var $question = document.getElementById("question");
@@ -186,9 +195,6 @@ $(document).ready(function () {
         $choice4.innerText = choice4;
        
     }
-
-    // Functions that run once the page loads.
-    hideQuestions();
 
     // Start button function
     $("#startBtn").on("click", function (event) {
@@ -284,7 +290,11 @@ $(document).ready(function () {
             secondQ();
         };
 
-    })
+    });
+
+    $("#playAgainBtn").on("click", function (event) {
+        location.reload();
+    });
 
     function secondQ() {
         stopTimer();

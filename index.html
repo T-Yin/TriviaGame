@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -16,77 +17,83 @@
 <body>
 
     <div class="container">
-        <div class="row">
+        <div class="row header">
             <div class="col text-center">
                 <h1>Disney Animated Films Trivia</h1>
             </div>
         </div>
 
-        <div id="instructions" class="row">
-            <div class="col text-center">
-                <p>
+        <section id="sectionTrivia">
+            <div id="instructions" class="row">
+                <div class="col text-center">
+                    <p>
+                        <br>
+                        <p>
+                            <h2>Instructions:</h2>
+                        </p>
+                        <h3>Answer all the questions within the time given.
+                            Good luck!</h3>
+                    </p>
                     <br>
                     <p>
-                        <h2>Instructions:</h2>
+                        <button id="startBtn" class="btn btn-info btn-lg">Start!</button>
                     </p>
-                    <h3>Answer all the questions within the time given.
-                        Good luck!</h3>
-                </p>
-                <br>
-                <p>
-                    <button id="startBtn" class="btn btn-secondary btn-lg">Start!</button>
-                </p>
+                </div>
             </div>
-        </div>
 
 
 
-        <div class="row questionsRow">
-            <div class="col text-center">
-                <p>
-                    <h2 id="question">
-                        <!-- Questions will be shown here? -->
-                    </h2>
-                </p>
+            <div class="row questionsRow">
+                <div class="col text-center">
+                    <p>
+                        <h2 id="question">
+                            <!-- Questions will be shown here? -->
+                        </h2>
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <div class="row answersRow">
-            <div class="col-8 m-auto">
-                <p class="text-center">
-                    <h2 id="answers">
+            <div class="row answersRow">
+                <div class="col-8 m-auto">
+                    <p class="text-center">
+                        <h2 id="answers">
 
-                        <button id="choice1" class="button btn btn-secondary btn-block btn-lg">1</button>
-                        <button id="choice2" class="button btn btn-secondary btn-block btn-lg">2</button>
-                        <button id="choice3" class="button btn btn-secondary btn-block btn-lg">3</button>
-                        <button id="choice4" class="button btn btn-secondary btn-block btn-lg">4</button>
+                            <button id="choice1" class="button btn btn-info btn-block btn-lg">1</button>
+                            <button id="choice2" class="button btn btn-info btn-block btn-lg">2</button>
+                            <button id="choice3" class="button btn btn-info btn-block btn-lg">3</button>
+                            <button id="choice4" class="button btn btn-info btn-block btn-lg">4</button>
 
-                    </h2>
-                </p>
-
-                <section id="resultsSection">
-                    <p id="results">
-                        <!-- User result for correct or incorrect shows here. -->
+                        </h2>
                     </p>
 
-                    <p id="scoreWin"></p>
-                    <p id="scoreLose"></p>
-                    <p id="scoreUnanswered"></p>
-                </section>
+                    <section id="resultsSection">
+                        <p id="results">
+                            <!-- User result for correct or incorrect shows here. -->
+                        </p>
 
+                        <p id="scoreWin"></p>
+                        <p id="scoreLose"></p>
+                        <p id="scoreUnanswered"></p>
+                    </section>
+
+                </div>
             </div>
-        </div>
 
-        <div class="row timerRow">
-            <div class="col text-center">
-                <h4>
-                    <p id="timer">
-                        <!-- Time remaining - 00:00 -->
-                    </p>
-                </h4>
+            <div class="row timerRow">
+                <div class="col text-center">
+                    <h4>
+                        <p id="timer">
+                            <!-- Time remaining - 00:00 -->
+                        </p>
+
+                        <div id="playAgain">
+                            <button id="playAgainBtn" class="btn btn-info btn-lg">Play Again?</button>
+                        </div>
+                    </h4>
+                </div>
             </div>
-        </div>
 
+        </section>
 
     </div>
 
