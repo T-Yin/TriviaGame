@@ -22,14 +22,19 @@
             </div>
         </div>
 
-        <div class="row">
+        <div id="instructions" class="row">
             <div class="col text-center">
                 <p>
-                    <h3>Answer all the questions within the time given.</h3>
+                    <br>
+                    <p>
+                        <h2>Instructions:</h2>
+                    </p>
+                    <h3>Answer all the questions within the time given.
+                        Good luck!</h3>
                 </p>
                 <br>
                 <p>
-                    <button type="button" class="btn btn-secondary btn-lg">Start!</button>
+                    <button id="startBtn" class="btn btn-secondary btn-lg">Start!</button>
                 </p>
             </div>
         </div>
@@ -40,7 +45,7 @@
             <div class="col text-center">
                 <p>
                     <h2 id="question">
-                        Questions will be shown here?
+                        <!-- Questions will be shown here? -->
                     </h2>
                 </p>
             </div>
@@ -51,13 +56,23 @@
                 <p class="text-center">
                     <h2 id="answers">
 
-                        <button type="button" id="choice1" class="btn btn-secondary btn-block btn-lg">1</button>
-                        <button type="button" id="choice2" class="btn btn-secondary btn-block btn-lg">2</button>
-                        <button type="button" id="choice3" class="btn btn-secondary btn-block btn-lg">3</button>
-                        <button type="button" id="choice4" class="btn btn-secondary btn-block btn-lg">4</button>
+                        <button id="choice1" class="button btn btn-secondary btn-block btn-lg">1</button>
+                        <button id="choice2" class="button btn btn-secondary btn-block btn-lg">2</button>
+                        <button id="choice3" class="button btn btn-secondary btn-block btn-lg">3</button>
+                        <button id="choice4" class="button btn btn-secondary btn-block btn-lg">4</button>
 
                     </h2>
                 </p>
+
+                <section id="resultsSection">
+                    <p id="results">
+                        <!-- User result for correct or incorrect shows here. -->
+                    </p>
+
+                    <p id="scoreWin"></p>
+                    <p id="scoreLose"></p>
+                    <p id="scoreUnanswered"></p>
+                </section>
 
             </div>
         </div>
@@ -66,7 +81,7 @@
             <div class="col text-center">
                 <h4>
                     <p id="timer">
-                        Time remaining - 00:00
+                        <!-- Time remaining - 00:00 -->
                     </p>
                 </h4>
             </div>
